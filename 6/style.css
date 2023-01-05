@@ -1,0 +1,104 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: system-ui;
+}
+
+#userData {
+    margin-top: 50px;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    padding: 4px 8px;
+    text-align: center;
+    font-size: 14px;
+}
+
+th {
+    background-color: rgba(70, 68, 68, 0.932);
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(213 201 201 / 82%);
+}
+.modal{
+    width: 80%;
+    background-color: white;
+    position: fixed;
+    top: 70px;left: 10%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid rgba(161, 159, 159, 0.8);
+    box-shadow: 5px 5px 5px 5px 5px 5px #00000085;
+
+}
+.modal>header{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 1px double black;
+}
+.rowInfo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.rowInfo>label{
+    display: flex;
+    /* flex-grow: 1; */
+    flex-direction: column;
+    margin-bottom: 10px;
+    margin-right: 8px;
+    font-weight: bold;
+}
+.rowInfo>label>input{
+    height: 30px;
+    border:1px solid gray ;
+    outline: none;
+    margin-top: 4px;
+    padding: 0 5px;
+    font-weight: normal;
+}
+
+.btnwrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 30px;
+    margin-top: 8px;
+}
+
+.btnwrapper>button{
+    margin-left: 8px;
+    cursor: pointer;
+    border: unset;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.cancel{
+    
+    background-color: rgb(226, 23, 23);
+    color: white;
+}
