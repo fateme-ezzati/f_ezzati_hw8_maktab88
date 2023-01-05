@@ -5,15 +5,47 @@
     font-size: 14px;
 }
 
+button {
+    margin-left: 8px;
+    cursor: pointer;
+    border: unset;
+    border-radius: 5px;
+    padding: 6px 12px;
+    color: white;
+    text-transform: capitalize;
+}
+
 main {
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
     font-family: system-ui;
 }
 
-#userData {
+main>header {
+    width: 80%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    border: 1px solid;
+    border-radius: 5px;
+    margin-bottom: 25px;
     margin-top: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.addData {
+    background-color: #4caf50;
+}
+
+#userData {
+    /* margin-top: 50px; */
 }
 
 table,
@@ -40,31 +72,37 @@ th {
 tr:nth-child(even) {
     background-color: rgb(213 201 201 / 82%);
 }
-.modal{
-    width: 80%;
+
+.modal {
+    /* width: 80%; */
+    width: 700px;
     background-color: white;
     position: fixed;
-    top: 70px;left: 10%;
+    top: 70px;
+    /* left: 10%; */
+    margin: 0 auto;
     padding: 15px;
     border-radius: 5px;
     border: 1px solid rgba(161, 159, 159, 0.8);
     box-shadow: 5px 5px 5px 5px 5px 5px #00000085;
 
 }
-.modal>header{
+
+.modal>header {
     margin-bottom: 10px;
     padding-bottom: 5px;
     text-transform: uppercase;
     font-weight: bold;
     border-bottom: 1px double black;
 }
-.rowInfo{
+
+.rowInfo {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.rowInfo>label{
+.rowInfo>label {
     display: flex;
     /* flex-grow: 1; */
     flex-direction: column;
@@ -72,16 +110,17 @@ tr:nth-child(even) {
     margin-right: 8px;
     font-weight: bold;
 }
-.rowInfo>label>input{
+
+.rowInfo>label>input {
     height: 30px;
-    border:1px solid gray ;
+    border: 1px solid gray;
     outline: none;
     margin-top: 4px;
     padding: 0 5px;
     font-weight: normal;
 }
 
-.btnwrapper{
+.btnwrapper {
     width: 100%;
     display: flex;
     align-items: center;
@@ -90,15 +129,8 @@ tr:nth-child(even) {
     margin-top: 8px;
 }
 
-.btnwrapper>button{
-    margin-left: 8px;
-    cursor: pointer;
-    border: unset;
-    border-radius: 5px;
-    padding: 5px 10px;
-}
-.cancel{
-    
+.cancel {
+
     background-color: rgb(226, 23, 23);
     color: white;
 }
