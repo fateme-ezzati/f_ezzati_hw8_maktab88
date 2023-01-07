@@ -19,7 +19,7 @@ function makeTable() {
                     <td index="${key}">${key + 1}</td>
                     ${Object.values(item).map(data => { return (`<td index="${key}">${data}</td>`) }).join('')}
                     <td>
-                        <button class="delete" onclick='deleteUserModal(${key})'>d</botton>
+                        <button class="delete" onclick='deleteUserModal(${item.uid})'>d</botton>
                         <button class="addData" onclick='generateModal(${key},true)'>E</botton>
                     </td>
                 </tr>`)
@@ -76,14 +76,14 @@ function cancel() {
     modal.remove()
 }
 
-function deleteUserModal(index) {
+function deleteUserModal(id) {
     let modal = document.createElement('div')
     modal.setAttribute('class', 'modal deleteModal')
     mainTag.appendChild(modal)
     modal.innerHTML=`
         <p>are you sure?</p>
         <div class='btnwrapper'>
-          <button class="delete" onclick='deleteUser(${index})'>yes delete user</botton> 
+          <button class="delete" onclick='deleteUser(${id})'>yes delete user</botton> 
             <button class="addData" onclick='cancel()'>no</botton> 
         </div>
 
@@ -95,7 +95,9 @@ function deleteUserModal(index) {
     // cancel()
 }
 
-function deleteUser(index){
+function deleteUser(id){
+    let index = userData.findIndex(item => item.uid === id)
+    if (index === -1) { return console.log('err') }
      userData.splice(index, 1)
     console.table(userData)
     makeTable()
