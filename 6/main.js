@@ -12,15 +12,15 @@ function makeTable() {
         <thead>
             <th class="title">row</th>
             ${Object.keys(userData[0]).map(item => { return (`<th class="title">${item}</th>`) }).join('')}
-            <th>oparation</th>
+            <th>operation</th>
         </thead>
         ${userData.map((item, key) => {
         return (`<tr>
                     <td index="${key}">${key + 1}</td>
                     ${Object.values(item).map(data => { return (`<td index="${key}">${data}</td>`) }).join('')}
                     <td>
-                        <button class="delete" onclick='deleteUserModal(${item.uid})'>d</botton>
-                        <button class="addData" onclick='generateModal(${key},true)'>E</botton>
+                        <button class="delete" onclick='deleteUserModal(${item.uid})'><i class="fa fa-trash"></i></botton>
+                        <button class="addData" onclick='generateModal(${key},true)'><i class="fa fa-edit"></i></botton>
                     </td>
                 </tr>`)
     }).join('')}`
